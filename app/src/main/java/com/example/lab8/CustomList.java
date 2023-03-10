@@ -63,4 +63,12 @@ public class CustomList extends ArrayAdapter<City> {
         return false;
     }
 
+    public void deleteCity(String cityName) {
+        for (int i = 0; i < getCount(); i++) {
+            if (cities.get(i).getCityName().equals(cityName)) {
+                cities.remove(i);
+            }
+        }
+    }
+
 }
