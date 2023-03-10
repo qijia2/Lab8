@@ -14,16 +14,17 @@ import java.util.ArrayList;
 public class CustomListTest {
     private CustomList list;
 
-    @Before
-    public void creatList() {
-        list = new CustomList(null, new ArrayList<City>());
+    public CustomList creatList() {
+        list = new CustomList(null, new ArrayList<>());
+        return list;
     }
 
     @Test
     public void addCity() {
-        int listsize = list.getCount();
+        list = creatList();
+        int listSize = list.getCount();
         list.addCity(new City("Edmonton", "AB"));
-        assertEquals(list.getCount(), listsize+1);
+        assertEquals(list.getCount(), listSize+1);
     }
 
 
