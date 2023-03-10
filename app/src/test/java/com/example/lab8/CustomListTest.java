@@ -44,7 +44,7 @@ public class CustomListTest {
     }
 
     @Test
-    public int countCity() {
+    public void countCity() {
         list = creatList();
         int listSize = list.getCount();
         list.addCity(new City("Edmonton", "AB"));
