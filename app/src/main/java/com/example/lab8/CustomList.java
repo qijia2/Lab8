@@ -54,4 +54,6 @@ public class CustomList extends ArrayAdapter<City> {
         return;
     }
 
+    //public boolean hasCity(String cityName) {return false;}
+
 }
