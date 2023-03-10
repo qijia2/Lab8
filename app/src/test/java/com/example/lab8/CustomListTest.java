@@ -42,4 +42,16 @@ public class CustomListTest {
         list.deleteCity("Edmonton");
         assertEquals(list.getCount(), listSize);
     }
+
+    @Test
+    public int countCity() {
+        list = creatList();
+        int listSize = list.getCount();
+        list.addCity(new City("Edmonton", "AB"));
+        list.addCity(new City("Toronto", "ON"));
+        list.addCity(new City("Montreal", "QC"));
+        assertEquals(list.countCity(), listSize+3);
+    }
+
+
 }
